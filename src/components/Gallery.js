@@ -11,7 +11,7 @@ import customer6 from "../img/customer6.jpg";
 function Gallery() {
   return (
     <div className="Gallery">
-      <section className="photo-gallery py-4 py-xl-5 parallax ">
+      <section className="photo-gallery py-4 py-xl-5">
         <div className="container">
           <div className="row mb-5">
             <div className="col-md-8 col-xl-6 text-center mx-auto text-white">

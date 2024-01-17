@@ -7,25 +7,59 @@
 }
 
 body {
-  background-color: #f5f5f5;
+  background-color: #000;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   line-height: 1.5;
   color: #333;
 }
-
-.parallax {
-  /* The image used */
-  background-image: url("./img/kebab1.jpg");
-
-  /* Set a specific height */
-  min-height: 100vh;
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+:root {
+  --zt-primary: #ffa500;
+  --zt-secondary: #000000;
+}
+.text-primary {
+  color: var(--zt-primary) !important;
+}
+.text-secondary {
+  color: var(--zt-secondary) !important;
+}
+.bg-primary {
+  background-color: var(--zt-primary) !important;
+}
+.bg-secondary {
+  background-color: var(--zt-secondary) !important;
+}
+.btn-primary {
+  background-color: var(--zt-primary) !important;
+  border-color: var(--zt-primary) !important;
+  color: #fff !important;
+}
+.btn-primary:hover {
+  background-color: #ff8c00 !important;
+  border-color: #ff8c00 !important;
+}
+.btn-secondary {
+  background-color: var(--zt-secondary) !important;
+  border-color: var(--zt-secondary) !important;
+  color: #fff !important;
+}
+.btn-secondary:hover {
+  background-color: #000 !important;
+  border-color: #000 !important;
+}
+.border-primary {
+  border-color: var(--zt-primary) !important;
+}
+.border-secondary {
+  border-color: var(--zt-secondary) !important;
+}
+.btn-outline-primary {
+  color: var(--zt-primary) !important;
+  border-color: var(--zt-primary) !important;
+}
+.btn-outline-primary:hover {
+  background-color: var(--zt-primary) !important;
+  color: #fff !important;
 }
 
 /* ----------------------------------------------

@@ -7,17 +7,17 @@ function Header() {
 
   return (
     <div className="Header">
-      <nav className="navbar fixed-top navbar-expand-md py-3">
+      <nav className="navbar fixed-top navbar-expand-md py-3 ">
         <div className="container-fluid">
           <div className="w-100 d-flex align-items-center justify-content-center me-lg-5 me-sm-0 ms-lg-0 ms-sm-3">
-            <ul className="navbar-nav p-1  me-5">
+            <ul className="navbar-nav p-1  me-5 d-none">
               <li className="nav-item">
                 <a
                   className="nav-link text-white"
                   aria-current="page"
-                  href="#contact"
+                  href="#Gallery"
                 >
-                  İletişim
+                  Galeri
                 </a>
               </li>
             </ul>
@@ -29,14 +29,14 @@ function Header() {
             >
               <span>mini Piknik</span>
             </a>
-            <ul className="navbar-nav p-1  ms-3">
+            <ul className="navbar-nav p-1  ms-3 d-none">
               <li className="nav-item">
                 <a
                   className="nav-link text-white"
                   aria-current="page"
-                  href="#Location"
+                  href="#ContactUs"
                 >
-                  Konum
+                  İletişim
                 </a>
               </li>
             </ul>

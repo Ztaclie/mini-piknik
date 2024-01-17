@@ -6,7 +6,7 @@ function ContactUs() {
   return (
     <div className="ContactUs">
       <section
-        className="position-relative py-4 py-xl-5 parallax mb-0"
+        className="position-relative py-4 py-xl-5 mb-0"
         style={ContactUsStyle}
       >
         <div className="container position-relative">
