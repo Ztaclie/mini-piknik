@@ -6,7 +6,7 @@ import ContactUs from "./components/ContactUs";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App bg-slate-600">
       {/* <Header /> */}
       <Hero />
       <Gallery />
