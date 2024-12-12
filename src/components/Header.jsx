@@ -7,18 +7,30 @@ function Header() {
 
   return (
     <div className="Header">
-      <nav className="bg-transparent w-screen absolute flex items-start justify-start h-12 ">
-        <div className="navbar-brand text-xl text-orange-400 font-bold p-2">
+      <nav className="bg-transparent w-screen fixed flex items-start justify-start h-12 mt-4">
+        <button
+          type="button"
+          className="navbar-brand text-xl text-orange-400 font-bold p-2 ml-4"
+        >
           Mini Piknik
-        </div>
-        <div className="grow h-full flex items-center justify-center gap-4 text-white">
-          <button type="button" className="p-2 border border-2 rounded-lg">
+        </button>
+        <div className="grow flex items-center justify-end gap-4 text-white mr-10">
+          <button
+            type="button"
+            className="p-2 underline hover:decoration-orange-400 hover:text-orange-400 underline-offset-4 rounded-lg"
+          >
             Home
           </button>
-          <button type="button" className="p-2 border border-2 rounded-lg">
+          <button
+            type="button"
+            className="p-2 underline hover:decoration-orange-400 hover:text-orange-400 underline-offset-4  rounded-lg"
+          >
             Gallery
           </button>
-          <button type="button" className="p-2 border border-2 rounded-lg">
+          <button
+            type="button"
+            className="p-2 underline hover:decoration-orange-400 hover:text-orange-400 underline-offset-4  rounded-lg"
+          >
             Contact Us
           </button>
         </div>
