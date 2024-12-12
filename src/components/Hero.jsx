@@ -12,8 +12,13 @@ const heroStyle = {
 
 function Hero() {
   return (
-    <div className="Hero w-full min-h-screen" style={heroStyle}>
-      <h1 className="text-white">Mini Piknik</h1>
+    <div
+      className="Hero w-full min-h-screen flex items-start justify-center"
+      style={heroStyle}
+    >
+      <div className="text-orange-400 text-5xl mt-20 font-bold">
+        Mini Piknik
+      </div>
     </div>
   );
 }

@@ -7,40 +7,20 @@ function Header() {
 
   return (
     <div className="Header">
-      <nav className="navbar fixed-top navbar-expand-md py-3 ">
-        <div className="container-fluid">
-          <div className="w-100 d-flex align-items-center justify-content-center me-lg-5 me-sm-0 ms-lg-0 ms-sm-3">
-            <ul className="navbar-nav p-1  me-5 d-none">
-              <li className="nav-item">
-                <a
-                  className="nav-link text-white"
-                  aria-current="page"
-                  href="#Gallery"
-                >
-                  Galeri
-                </a>
-              </li>
-            </ul>
-
-            <a
-              className="navbar-brand p-2 tracking-in-expand"
-              href="#Home"
-              style={headerFontStyle}
-            >
-              <span>mini Piknik</span>
-            </a>
-            <ul className="navbar-nav p-1  ms-3 d-none">
-              <li className="nav-item">
-                <a
-                  className="nav-link text-white"
-                  aria-current="page"
-                  href="#ContactUs"
-                >
-                  İletişim
-                </a>
-              </li>
-            </ul>
-          </div>
+      <nav className="bg-transparent w-screen absolute flex items-start justify-start h-12 ">
+        <div className="navbar-brand text-xl text-orange-400 font-bold p-2">
+          Mini Piknik
+        </div>
+        <div className="grow h-full flex items-center justify-center gap-4 text-white">
+          <button type="button" className="p-2 border border-2 rounded-lg">
+            Home
+          </button>
+          <button type="button" className="p-2 border border-2 rounded-lg">
+            Gallery
+          </button>
+          <button type="button" className="p-2 border border-2 rounded-lg">
+            Contact Us
+          </button>
         </div>
       </nav>
     </div>
