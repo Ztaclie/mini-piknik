@@ -21,27 +21,27 @@ function Gallery() {
           alt="Customer 1"
         />
         <img
-          className="w-50 border border-2 rounded hover:border-orange-400 cursor-pointer hover:scale-110 hover:translate-y-8"
+          className="w-50 border border-2 rounded hover:border-orange-400 cursor-pointer hover:scale-110 hover:translate-y-8 hover:transition-all hover:ease-in hover:duration-300 transition-all ease-out duration-300"
           src={customer2}
           alt="Customer 2"
         />
         <img
-          className="w-50 border border-2 rounded hover:border-orange-400 cursor-pointer hover:scale-110 hover:-translate-x-8 hover:translate-y-8"
+          className="w-50 border border-2 rounded hover:border-orange-400 cursor-pointer hover:scale-110 hover:-translate-x-8 hover:translate-y-8 hover:transition-all hover:ease-in hover:duration-300 transition-all ease-out duration-300"
           src={customer3}
           alt="Customer 3"
         />
         <img
-          className="w-50 border border-2 rounded hover:border-orange-400 cursor-pointer hover:scale-110 hover:translate-x-8 hover:-translate-y-8"
+          className="w-50 border border-2 rounded hover:border-orange-400 cursor-pointer hover:scale-110 hover:translate-x-8 hover:-translate-y-8 hover:transition-all hover:ease-in hover:duration-300 transition-all ease-out duration-300"
           src={customer4}
           alt="Customer 4"
         />
         <img
-          className="w-50 border border-2 rounded hover:border-orange-400 cursor-pointer hover:scale-110 hover:-translate-y-8"
+          className="w-50 border border-2 rounded hover:border-orange-400 cursor-pointer hover:scale-110 hover:-translate-y-8 hover:transition-all hover:ease-in hover:duration-300 transition-all ease-out duration-300"
           src={customer5}
           alt="Customer 5"
         />
         <img
-          className="w-50 border border-2 rounded hover:border-orange-400 cursor-pointer hover:scale-110 hover:-translate-x-8 hover:-translate-y-8"
+          className="w-50 border border-2 rounded hover:border-orange-400 cursor-pointer hover:scale-110 hover:-translate-x-8 hover:-translate-y-8 hover:transition-all hover:ease-in hover:duration-300 transition-all ease-out duration-300"
           src={customer6}
           alt="Customer 6"
         />
