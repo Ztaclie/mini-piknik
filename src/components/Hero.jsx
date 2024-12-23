@@ -14,6 +14,7 @@ function Hero() {
   return (
     <div
       className="Hero w-full min-h-screen flex items-start justify-center"
+      id="home"
       style={heroStyle}
     >
       <div className="text-orange-400 text-5xl mt-20 font-bold">

@@ -15,24 +15,24 @@ function Header() {
           Mini Piknik
         </button>
         <div className="grow flex items-center justify-end gap-4 text-white mr-10">
-          <button
-            type="button"
+          <a
+            href="#home"
             className="p-2 underline hover:decoration-orange-400 hover:text-orange-400 underline-offset-4 rounded-lg"
           >
             Home
-          </button>
-          <button
-            type="button"
+          </a>
+          <a
+            href="#gallery"
             className="p-2 underline hover:decoration-orange-400 hover:text-orange-400 underline-offset-4  rounded-lg"
           >
             Gallery
-          </button>
-          <button
-            type="button"
+          </a>
+          <a
+            href="#contact"
             className="p-2 underline hover:decoration-orange-400 hover:text-orange-400 underline-offset-4  rounded-lg"
           >
             Contact Us
-          </button>
+          </a>
         </div>
       </nav>
     </div>

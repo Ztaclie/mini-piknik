@@ -10,7 +10,7 @@ import customer6 from "../img/customer6.jpg";
 
 function Gallery() {
   return (
-    <div className="Gallery w-full py-4">
+    <div className="Gallery w-full py-4" id="gallery">
       <div className="flex justify-center items-center my-5">
         <div className="text-bold text-3xl text-white">Müşterilerimiz</div>
       </div>
