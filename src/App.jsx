@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Gallery from "./components/Gallery";
 import ContactUs from "./components/ContactUs";
+import SocialMedia from "./components/SocialMedia";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Hero />
       <Gallery />
       <ContactUs />
+      <SocialMedia />
     </div>
   );
 }
