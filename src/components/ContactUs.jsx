@@ -1,79 +1,29 @@
-function ContactUs() {
-  const ContactUsStyle = {
-    minHeight: "50vh",
-  };
-
+const ContactUs = () => {
   return (
-    <div className="ContactUs">
-      <section
-        className="position-relative py-4 py-xl-5 mb-0"
-        style={ContactUsStyle}
-      >
-        <div className="container position-relative">
-          <div className="row">
-            <div className="col">
-              <iframe
-                allowfullscreen
-                frameborder="0"
-                src="https://cdn.bootstrapstudio.io/placeholders/map.html"
-                width="100%"
-                height="100%"
-              ></iframe>
-            </div>
-            <div className="col-md-6 col-xl-4 bg-dark bg-opacity-75 rounded-2">
-              <div>
-                <form className="p-3 p-xl-4 text-white" method="post">
-                  <h4>Contact us</h4>
-                  <p className="text-white ">
-                    Eros ligula lobortis elementum amet commodo ac nibh ornare,
-                    eu lobortis.
-                  </p>
-                  <div className="mb-3">
-                    <label className="form-label" for="name">
-                      Name
-                    </label>
-                    <input
-                      id="name"
-                      className="form-control"
-                      type="text"
-                      name="name"
-                    />
-                  </div>
-                  <div className="mb-3">
-                    <label className="form-label" for="email">
-                      Email
-                    </label>
-                    <input
-                      id="email"
-                      className="form-control"
-                      type="email"
-                      name="email"
-                    />
-                  </div>
-                  <div className="mb-3">
-                    <label className="form-label" for="message">
-                      Message
-                    </label>
-                    <textarea
-                      id="message"
-                      className="form-control"
-                      name="message"
-                      rows="6"
-                    ></textarea>
-                  </div>
-                  <div className="mb-3">
-                    <button className="btn btn-primary" type="submit">
-                      Send{" "}
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+    <div className="bg-white py-12" id="contact">
+      <h2 className="text-center text-3xl font-bold mb-6">Contact Us</h2>
+      <form className="max-w-lg mx-auto space-y-4">
+        <input
+          type="text"
+          placeholder="Your Name"
+          className="w-full border-gray-300 p-3 rounded-md"
+        />
+        <input
+          type="email"
+          placeholder="Your Email"
+          className="w-full border-gray-300 p-3 rounded-md"
+        />
+        <textarea
+          placeholder="Your Message"
+          className="w-full border-gray-300 p-3 rounded-md"
+          rows="4"
+        ></textarea>
+        <button className="w-full bg-red-600 text-white p-3 rounded-md hover:bg-red-700">
+          Send Message
+        </button>
+      </form>
     </div>
   );
-}
+};
 
 export default ContactUs;
