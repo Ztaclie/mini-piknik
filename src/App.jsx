@@ -12,9 +12,9 @@ function App() {
       <Header />
       <Hero />
       <Gallery />
+      <Testimonials />
       <ContactUs />
       <SocialMedia />
-      <Testimonials />
     </div>
   );
 }
