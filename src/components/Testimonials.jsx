@@ -30,43 +30,45 @@ const Testimonials = () => {
     },
   ];
 
-  const [visibleTestimonials, setVisibleTestimonials] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    let interval = setInterval(() => {
-      setVisibleTestimonials((prev) => {
-        // Add the next testimonial at the end of the array
-        const nextIndex = prev.length % testimonials.length;
-        return [...prev, testimonials[nextIndex]];
-      });
-    }, 2000); // Add a new testimonial every 2 seconds
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+    }, 4000); // Increased duration to 4 seconds for better readability
 
     return () => clearInterval(interval);
-  }, [testimonials]);
+  }, [testimonials.length]);
 
   return (
-    <div className="w-full h-96">
+    <div className="w-full py-12 bg-gray-50">
       <h2
         id="reviews-title"
-        classname="text-3xl font-medium tracking-tight text-gray-900 sm:text-center"
+        className="text-3xl font-medium tracking-tight text-gray-900 text-center"
       >
-        Everyone is changing their life with Pocket.
+        What Our Customers Say
       </h2>
-      <p className="mt-2 text-lg text-gray-600 sm:text-center">
-        Thousands of people have doubled their net-worth in the last 30 days.
+      <p className="mt-2 text-lg text-gray-600 text-center">
+        Join thousands of satisfied customers who love our kebabs
       </p>
-      <div className="relative -mx-4 mt-16 grid h-[49rem] max-h-[150vh] grid-cols-1 items-start gap-8 overflow-hidden px-4 sm:mt-20 md:grid-cols-2 lg:grid-cols-3">
-        <div className="space-y-8 py-4">
-          <div className="p-4 bg-white rounded-3xl min-w-96 mx-4">
-            <p className="text-xl">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
-              voluptas dignissimos quia eos quo nemo? Molestias porro libero
-              reiciendis qui quod deleniti maxime harum asperiores quia
-              assumenda, natus doloribus. Dolore!
+      <div className="max-w-4xl mx-auto mt-16">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentIndex}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.5 }}
+            className="p-6 bg-white rounded-3xl shadow-lg"
+          >
+            <p className="text-xl text-gray-700 italic">
+              "{testimonials[currentIndex].review}"
             </p>
-            <div className="text-1xl">-User</div>
-          </div>
-        </div>
+            <div className="mt-4 text-lg font-medium text-gray-900">
+              - {testimonials[currentIndex].name}
+            </div>
+          </motion.div>
+        </AnimatePresence>
       </div>
     </div>
   );
