@@ -1,41 +1,36 @@
 function Header() {
-  const headerFontStyle = {
-    color: "orange",
-    // marginLeft: "auto",
-    // marginRight: "auto",
-  };
-
   return (
-    <div className="Header">
-      <nav className="bg-transparent w-screen fixed flex items-start justify-start h-12 mt-4">
+    <header className="fixed w-full z-50">
+      <nav className="bg-black/50 backdrop-blur-sm w-full flex items-center justify-between h-16 px-6">
         <button
           type="button"
-          className="navbar-brand text-xl text-orange-400 font-bold p-2 ml-4"
+          className="text-2xl text-orange-400 font-bold hover:text-orange-300 transition-colors"
         >
           Mini Piknik
         </button>
-        <div className="grow flex items-center justify-end gap-4 text-white mr-10">
+
+        <div className="flex items-center gap-6 text-white">
           <a
             href="#home"
-            className="p-2 underline hover:decoration-orange-400 hover:text-orange-400 underline-offset-4 rounded-lg"
+            className="p-2 hover:text-orange-400 transition-colors"
           >
             Home
           </a>
           <a
             href="#gallery"
-            className="p-2 underline hover:decoration-orange-400 hover:text-orange-400 underline-offset-4  rounded-lg"
+            className="p-2 hover:text-orange-400 transition-colors"
           >
             Gallery
           </a>
           <a
             href="#contact"
-            className="p-2 underline hover:decoration-orange-400 hover:text-orange-400 underline-offset-4  rounded-lg"
+            className="p-2 hover:text-orange-400 transition-colors"
           >
             Contact Us
           </a>
         </div>
       </nav>
-    </div>
+    </header>
   );
 }
 
