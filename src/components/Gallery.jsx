@@ -1,6 +1,6 @@
+import { motion } from "framer-motion";
 import "./Gallery.css";
 
-import img from "../img/kebab1.jpg";
 import customer1 from "../img/customer1.jpg";
 import customer2 from "../img/customer2.jpg";
 import customer3 from "../img/customer3.jpg";
@@ -9,42 +9,84 @@ import customer5 from "../img/customer5.jpg";
 import customer6 from "../img/customer6.jpg";
 
 function Gallery() {
+  const images = [
+    { src: customer1, alt: "Customer enjoying kebab" },
+    { src: customer2, alt: "Fresh grilled kebab" },
+    { src: customer3, alt: "Restaurant atmosphere" },
+    { src: customer4, alt: "Traditional Turkish meal" },
+    { src: customer5, alt: "Kebab preparation" },
+    { src: customer6, alt: "Happy customers" },
+  ];
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 15,
+      },
+    },
+  };
+
   return (
-    <div className="Gallery w-full py-4" id="gallery">
-      <div className="flex justify-center items-center my-5">
-        <div className="text-bold text-3xl text-white">Müşterilerimiz</div>
-      </div>
-      <div className="grid grid-cols-3 gap-4 mx-4">
-        <img
-          className="w-50 border border-2 rounded hover:border-orange-400 cursor-pointer hover:scale-110 hover:translate-x-8 hover:translate-y-8 hover:transition-all hover:ease-in hover:duration-300 transition-all ease-out duration-300"
-          src={customer1}
-          alt="Customer 1"
-        />
-        <img
-          className="w-50 border border-2 rounded hover:border-orange-400 cursor-pointer hover:scale-110 hover:translate-y-8 hover:transition-all hover:ease-in hover:duration-300 transition-all ease-out duration-300"
-          src={customer2}
-          alt="Customer 2"
-        />
-        <img
-          className="w-50 border border-2 rounded hover:border-orange-400 cursor-pointer hover:scale-110 hover:-translate-x-8 hover:translate-y-8 hover:transition-all hover:ease-in hover:duration-300 transition-all ease-out duration-300"
-          src={customer3}
-          alt="Customer 3"
-        />
-        <img
-          className="w-50 border border-2 rounded hover:border-orange-400 cursor-pointer hover:scale-110 hover:translate-x-8 hover:-translate-y-8 hover:transition-all hover:ease-in hover:duration-300 transition-all ease-out duration-300"
-          src={customer4}
-          alt="Customer 4"
-        />
-        <img
-          className="w-50 border border-2 rounded hover:border-orange-400 cursor-pointer hover:scale-110 hover:-translate-y-8 hover:transition-all hover:ease-in hover:duration-300 transition-all ease-out duration-300"
-          src={customer5}
-          alt="Customer 5"
-        />
-        <img
-          className="w-50 border border-2 rounded hover:border-orange-400 cursor-pointer hover:scale-110 hover:-translate-x-8 hover:-translate-y-8 hover:transition-all hover:ease-in hover:duration-300 transition-all ease-out duration-300"
-          src={customer6}
-          alt="Customer 6"
-        />
+    <div className="bg-gray-50 py-16" id="gallery">
+      <div className="max-w-7xl mx-auto px-4">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Gallery</h2>
+          <p className="text-gray-600 text-lg">
+            Experience the authentic taste of Turkish cuisine
+          </p>
+        </motion.div>
+
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          {images.map((image, index) => (
+            <motion.div
+              key={index}
+              variants={itemVariants}
+              whileHover={{
+                scale: 1.02,
+                transition: { duration: 0.2 },
+              }}
+              className="relative group overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300"
+            >
+              <img
+                src={image.src}
+                alt={image.alt}
+                className="w-full h-72 object-cover transform transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
+                <p className="text-white text-lg font-medium px-4 text-center transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                  {image.alt}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </div>
   );

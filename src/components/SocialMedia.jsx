@@ -1,6 +1,6 @@
 const SocialMedia = () => {
   return (
-    <div className="bg-white py-6">
+    <div className="bg-gray-50 py-6">
       <h2 className="text-center text-2xl font-bold mb-4">Follow Us</h2>
       <div className="flex justify-center gap-6">
         <a
