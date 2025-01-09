@@ -10,7 +10,7 @@ function Hero() {
       <div className="absolute inset-0 z-0">
         <img
           src={kebab1}
-          alt="Delicious kebab"
+          alt="Lezzetli kebap"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/40" />
@@ -21,14 +21,8 @@ function Hero() {
           Mini Piknik
         </h1>
         <p className="text-2xl text-white font-medium">
-          Authentic Turkish Kebab Experience
+          Mini bir Kebap Deneyimi
         </p>
-        <button
-          className="mt-6 px-8 py-3 bg-orange-500 text-white rounded-full 
-          hover:bg-orange-600 transition-colors font-medium"
-        >
-          Order Now
-        </button>
       </div>
     </div>
   );

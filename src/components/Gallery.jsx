@@ -10,12 +10,12 @@ import customer6 from "../img/customer6.jpg";
 
 function Gallery() {
   const images = [
-    { src: customer1, alt: "Customer enjoying kebab" },
-    { src: customer2, alt: "Fresh grilled kebab" },
-    { src: customer3, alt: "Restaurant atmosphere" },
-    { src: customer4, alt: "Traditional Turkish meal" },
-    { src: customer5, alt: "Kebab preparation" },
-    { src: customer6, alt: "Happy customers" },
+    { src: customer1, alt: "Kebap keyfi" },
+    { src: customer2, alt: "Taze ızgara kebap" },
+    { src: customer3, alt: "Restoran atmosferi" },
+    { src: customer4, alt: "Geleneksel Türk yemeği" },
+    { src: customer5, alt: "Kebap hazırlığı" },
+    { src: customer6, alt: "Mutlu müşteriler" },
   ];
 
   const containerVariants = {
@@ -51,9 +51,9 @@ function Gallery() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Gallery</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">Galerimiz</h2>
           <p className="text-gray-600 text-lg">
-            Experience the authentic taste of Turkish cuisine
+            Otantik Türk mutfağının tadını çıkarın
           </p>
         </motion.div>
 

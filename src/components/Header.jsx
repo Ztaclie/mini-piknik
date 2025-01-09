@@ -14,19 +14,19 @@ function Header() {
             href="#home"
             className="p-2 hover:text-orange-400 transition-colors"
           >
-            Home
+            Ana Sayfa
           </a>
           <a
             href="#gallery"
             className="p-2 hover:text-orange-400 transition-colors"
           >
-            Gallery
+            Galeri
           </a>
           <a
             href="#contact"
             className="p-2 hover:text-orange-400 transition-colors"
           >
-            Contact Us
+            İletişim
           </a>
         </div>
       </nav>

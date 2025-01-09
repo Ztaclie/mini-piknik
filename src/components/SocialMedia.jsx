@@ -1,7 +1,7 @@
 const SocialMedia = () => {
   return (
     <div className="bg-gray-50 py-6">
-      <h2 className="text-center text-2xl font-bold mb-4">Follow Us</h2>
+      <h2 className="text-center text-2xl font-bold mb-4">Bizi Takip Edin</h2>
       <div className="flex justify-center gap-6">
         <a
           href="https://facebook.com"
